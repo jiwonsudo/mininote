@@ -1,0 +1,20 @@
+html, body { overflow: hidden; user-select: none; }
+body { background: var(--bg-side); border-bottom: 1px solid var(--border); -webkit-app-region: drag; }
+#bar { display: flex; align-items: center; height: 40px; padding: 0 8px; gap: 4px; }
+body.darwin #bar { padding-left: 84px; }
+#tabs { display: flex; gap: 2px; min-width: 0; overflow: hidden; }
+.tab {
+  -webkit-app-region: no-drag;
+  display: flex; align-items: center; gap: 6px;
+  min-width: 60px; max-width: 220px; height: 28px;
+  padding: 0 6px 0 10px; border-radius: 6px;
+  font-size: 13px; color: var(--text-muted);
+}
+.tab:hover { background: var(--bg-hover); }
+.tab.active { background: var(--bg); color: var(--text); box-shadow: 0 0 0 1px var(--border); }
+.tab .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tab .x { width: 18px; height: 18px; border-radius: 4px; font-size: 11px; line-height: 18px; text-align: center; visibility: hidden; }
+.tab:hover .x, .tab.active .x { visibility: visible; }
+.tab .x:hover { background: var(--bg-active); }
+#new { -webkit-app-region: no-drag; width: 26px; height: 26px; border-radius: 6px; color: var(--text-muted); }
+#new:hover { background: var(--bg-hover); color: var(--text); }

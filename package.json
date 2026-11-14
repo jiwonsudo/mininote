@@ -1,0 +1,26 @@
+{
+  "name": "mininote",
+  "version": "0.1.0",
+  "description": "Electron 기반 블록형 메모 앱",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w better-sqlite3",
+    "postinstall": "electron-rebuild -f -w better-sqlite3",
+    "package": "node scripts/package.js",
+    "icon": "electron scripts/make-icon.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@electron/rebuild": "^4.2.1",
+    "electron": "^45.3.1"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.1.1"
+  },
+  "private": true
+}

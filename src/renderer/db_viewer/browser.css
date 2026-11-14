@@ -1,0 +1,17 @@
+body { display: flex; height: 100vh; overflow: hidden; font-size: 13px; }
+aside { width: 170px; flex: none; background: var(--bg-side); border-right: 1px solid var(--border); padding: 8px; overflow-y: auto; }
+aside .head { color: var(--text-muted); font-size: 12px; padding: 4px 8px; }
+aside button { display: block; width: 100%; text-align: left; padding: 4px 8px; border-radius: 5px; }
+aside button:hover { background: var(--bg-hover); }
+main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+#sql { height: 110px; resize: vertical; border: 0; border-bottom: 1px solid var(--border); padding: 12px; background: var(--code); color: var(--text); font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; outline: none; }
+.toolbar { display: flex; align-items: center; gap: 14px; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+#run { background: var(--accent); color: #fff; padding: 4px 12px; border-radius: 5px; }
+#status { color: var(--text-muted); margin-left: auto; }
+#out { flex: 1; overflow: auto; }
+table { border-collapse: collapse; font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; }
+th, td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 4px 8px; text-align: left; vertical-align: top; max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+th { position: sticky; top: 0; background: var(--bg-side); font-weight: 600; }
+tr.changed td { animation: changed 1.2s ease-out; }
+@keyframes changed { from { background: rgba(5, 150, 105, 0.3); } to { background: transparent; } }
+.err { color: #dc4a4a; padding: 12px; white-space: pre-wrap; }

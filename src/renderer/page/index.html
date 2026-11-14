@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>MiniNote</title>
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="side-title">MiniNote</div>
+    <button id="search-btn" class="side-btn" title="⌘P">🔍 검색</button>
+    <div class="side-section">페이지</div>
+    <nav id="page-list"></nav>
+    <button id="new-page" class="side-btn">＋ 새 페이지</button>
+  </aside>
+
+  <main id="main">
+    <div id="breadcrumbs"></div>
+    <div id="doc">
+      <h1 id="title" contenteditable="plaintext-only" data-placeholder="제목 없음" spellcheck="false"></h1>
+      <div id="blocks"></div>
+      <div id="click-catcher"></div>
+    </div>
+  </main>
+
+  <div id="slash-menu" hidden></div>
+  <div id="select-box" hidden></div>
+  <div id="drop-line" hidden></div>
+
+  <div id="format-bar" hidden>
+    <button data-fmt="b" title="굵게 ⌘B"><b>B</b></button>
+    <button data-fmt="i" title="기울임 ⌘I"><i>i</i></button>
+    <button data-fmt="s" title="취소선 ⇧⌘S"><s>S</s></button>
+    <button data-fmt="c" title="코드 ⌘E">&lt;/&gt;</button>
+    <button data-fmt="a" title="링크 ⌘K">🔗 링크</button>
+    <input id="link-input" placeholder="링크 주소 붙여넣기 (비우고 Enter = 링크 제거)" spellcheck="false">
+  </div>
+
+  <button id="log-toggle" title="이 탭이 보낸 operations 보기">⚡ transactions</button>
+  <section id="log-panel" hidden>
+    <header>transactions <small>(이 탭에서 보낸 operations, 최신순)</small></header>
+    <div id="log-list"></div>
+  </section>
+
+  <script src="../shared/sqlite.js"></script>
+  <script src="../shared/richtext.js"></script>
+  <script src="../shared/store.js"></script>
+  <script src="caret.js"></script>
+  <script src="page.js"></script>
+</body>
+</html>
