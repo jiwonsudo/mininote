@@ -145,3 +145,7 @@ main.js (메인 프로세스)
 | `src/renderer/tabs`, `search`, `db_viewer` | 탭 막대, 빠른 검색, DB 뷰어 |
 | `scripts` | 앱 묶기, 아이콘 만들기 |
 | `build` | 앱 아이콘 |
+
+## 라이선스
+
+[MIT](LICENSE)
